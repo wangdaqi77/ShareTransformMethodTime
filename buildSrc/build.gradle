@@ -1,0 +1,30 @@
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {}
+}
+
+
+dependencies {
+    implementation 'com.android.tools.build:gradle:4.0.2'
+    implementation gradleApi()
+    implementation localGroovy()
+
+    //ASM
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-util:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.1'
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
